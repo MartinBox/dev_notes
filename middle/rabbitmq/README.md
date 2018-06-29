@@ -7,8 +7,8 @@
 ## 安装
 
 - sudo dpkg -i 文件
-- 安装过程中可能会报错，如：未安装软件包 erlang-nox
-- 此时需要执行：sudo apt-get install erlang-nox，安装过程中，如要提示：请尝试不指明软件包的名字来运行“apt --fix-broken install”，则执行：sudo apt --fix-broken install
+  安装过程中可能会报错，如：未安装软件包 erlang-nox，此时需要执行：sudo apt-get install erlang-nox，
+  如要继续提示：请尝试不指明软件包的名字来运行“apt --fix-broken install”，则执行：sudo apt --fix-broken install
 
 
 ## 服务命令
@@ -25,3 +25,9 @@ sudo rabbitmqctl set_user_tags muscle administrator
 - 赋予virtual host中所有资源的配置/写/读权限以便管理其中的资源
 sudo rabbitmqctl set_permissions -p / muscle '.*' '.*' '.*'
 
+## 网页控制台
+- 进入安装目录：cd /usr/lib/rabbitmq
+- 查看已经安装的插件：rabbitmq-plugins list
+- 开启网页控制台：rabbitmq-plugins enable rabbitmq_management
+- 重启rabbitmq服务
+- 网页访问：http://127.0.0.1:15672，账号：muscle 密码：coder
