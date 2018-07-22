@@ -8,9 +8,9 @@
 - 解压 tar -zxvf redis-4.0.10.tar.gz -C /opt/appl/
 - 编译 cd src/, 执行make，如果没有安装tcl，则需要执行sudo apt install tcl，然后再执行make install
 - 安装完之后，会在src目录下生成几个可执行文件，分别是mkreleasehdr.sh redis-benchmark redis-check-aof redis-check-dump redis-cli redis-sentinel redis-server。其中redis-server是启动Redis服务的，redis-cli是进入Redis客户端的
-- 文件迁移 
-  sudo mv mkreleasehdr.sh redis-benchmark redis-check-aof redis-cli redis-server /usr/local/redis/bin/
-  sudo mv redis.conf /usr/local/redis/etc/
+- 文件迁移
+sudo mv mkreleasehdr.sh redis-benchmark redis-check-aof redis-cli redis-server /usr/local/redis/bin/
+sudo mv redis.conf /usr/local/redis/etc/
 - 设置后台运行模式，vi redis.conf，把daemonize no修改成daemonize yes
 - 设置密码 vi redis.conf，修改requirepass xxxxxx
 
