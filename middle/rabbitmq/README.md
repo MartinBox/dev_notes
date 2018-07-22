@@ -13,7 +13,7 @@
 
 ## 服务命令
 - 启动：sudo rabbitmq-server start
-- 停止：sudo rabbitmq-server stop
+- 停止：sudo rabbitmq-server stop / sudo rabbitmqctl stop 后者生效，前者不生效，不知道什么原因？？
 - 重启：sudo rabbitmq-server restart
 - 状态：sudo rabbitmqctl status
 
@@ -31,3 +31,7 @@ sudo rabbitmqctl set_permissions -p / muscle '.*' '.*' '.*'
 - 开启网页控制台：rabbitmq-plugins enable rabbitmq_management
 - 重启rabbitmq服务
 - 网页访问：http://127.0.0.1:15672，账号：muscle 密码：coder
+
+## 日志查看
+/var/log/rabbitmq/rabbit@[hostname].log  hostname:主机名
+例如：/var/log/rabbitmq/rabbit@thinkpad.log
