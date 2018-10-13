@@ -6,7 +6,7 @@
 ## 安装
 - `cd /opt/appl/download`
 - 解压 `tar -zxvf redis-4.0.10.tar.gz -C /opt/appl/`
-- 编译 `cd src/`, 执行make，如果没有安装tcl，则需要执行`sudo apt install tcl`，然后再执行`make install`
+- 编译 `cd src/`, 执行make(如果提示`/bin/sh: 1: cc: not found`表示系统没有安装gcc，执行`sudo apt-get intall gcc`;如果没有安装tcl，则需要执行`sudo apt install tcl`，然后再执行`make install`)
 - 安装完之后，会在src目录下生成几个可执行文件，分别是mkreleasehdr.sh redis-benchmark redis-check-aof redis-check-dump redis-cli redis-sentinel redis-server。其中redis-server是启动Redis服务的，redis-cli是进入Redis客户端的
 - 文件迁移<br>
  `sudo mv mkreleasehdr.sh redis-benchmark redis-check-aof redis-cli redis-server /usr/local/redis/bin/` <br>
